@@ -13,8 +13,7 @@ torch==2.1.1
 tqdm==4.66.1
 
 # Installation Guide
-Clone this Github repo and set up a new conda environment. It normally takes about 10 minutes to install on a normal desktop computer.
-    # create a new conda environment
+It normally takes about 10 minutes to install a new conda environment on a normal desktop computer. Run the following code under the conda environment to create the new virtual environment and install the required packages.
     
     $ conda create --name PointDPI python=3.8
     
@@ -27,3 +26,20 @@ Clone this Github repo and set up a new conda environment. It normally takes abo
     $ pip install torch==2.1.1
     
     $ pip install tqdm==4.66.1
+
+# Datasets
+We evaluated the performance of the method on three public datasets: DrugBank, BindingDB-IBM, and Luo's dataset.
+For Drugbank dataset, we provided the split datasets for:
+
+(1) ablation experiments in folder ./dataset/drugbank/result/
+
+(2) five-fold cross-validation in folder ./dataset/drugbank/result/CV5/
+
+(3) cold-start experiments in folder ./dataset/drugbank/result/cold_drug/ and ./dataset/drugbank/result/cold_protein/
+
+For Luo's dataset, we provided the split datasets for five-fold cross-validation in folder ./dataset/dtinet/result/CV5/.
+
+For BindingDB dataset, we provided the standard splited dataset in folder ./dataset/bingdingdb/result/.
+
+Due to storage space restrictions on github, you can download our dataset by visiting the link: aaa.
+Unzip the dataset folder and place it in the root directory of the project to achieve: ./dataset
