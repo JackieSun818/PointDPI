@@ -43,3 +43,16 @@ For BindingDB dataset, we provided the standard splited dataset in folder ./data
 
 Due to storage space restrictions on github, you can download our dataset by visiting the link: aaa.
 Unzip the dataset folder and place it in the root directory of the project to achieve: ./dataset/
+
+# Training and testing
+You can use PointDPI_train.py to train the model. 
+
+Line 4 can assign the GPU devices. 
+
+Line 227, 228, 286, 333 can assign the dataset and the train file / test file manually.
+
+You can also used command:  python PointDPI_train.py --task drugbank --path _confi_greater_than_50 for a quickly train.
+
+The program can automatically save the best-performing model to the path ./models/.
+
+After training, you can run evalute.py for testing. You need to assign the task and the test set at line 268-273. In addition, you also have to assign the model for test at line 283. In folder ./models/, we have provided some models that have been trained to help you reproduce the experimental results in the paper.
