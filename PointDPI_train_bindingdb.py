@@ -280,14 +280,13 @@ if __name__ == '__main__':
     # task = 'drugbank'   # select from 'drugbank', 'bindingdb' and 'dtinet'
     # task = 'dtinet'  # select from 'drugbank', 'bindingdb' and 'dtinet'
     task = 'bindingdb'  # select from 'drugbank', 'bindingdb' and 'dtinet'
-    # confi = 'confi60'
 
 
     # 将所有的药物和蛋白所需数据读入内存中方便后续快速取用，确保针对每种药物/蛋白只处理一次
     drug_smiles_data, drug_points_data = data_preparation_drug_all(task)
     protein_bert_data, protein_point_data = data_preparation_protein_all(task)
 
-    with open('dataset/' + task + '/result/train_confi80.csv') as f1:
+    with open('dataset/' + task + '/result/train.csv') as f1:
         train_data = f1.readlines()
     num_sample = len(train_data)
     drug_idx_train, protein_idx_train, label_train = data_preparation(train_data, task)
@@ -334,7 +333,7 @@ if __name__ == '__main__':
                 else:
                     print('Epoch: ', epoch, '| loss: %.20f' % loss.item())
 
-        with open('dataset/' + task + '/result/test_confi80.csv') as f1:
+        with open('dataset/' + task + '/result/test.csv') as f1:
             val_data = f1.readlines()
         # num_sample = len(train_data)
         drug_idx_val, protein_idx_val, label_val = data_preparation(val_data, task)
