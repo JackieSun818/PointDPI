@@ -268,7 +268,7 @@ if __name__ == '__main__':
     task = 'drugbank'   # select from 'drugbank', 'bindingdb' and 'dtinet'
     # task = 'dtinet'  # select from 'drugbank', 'bindingdb' and 'dtinet'
     # task = 'bindingdb'  # select from 'drugbank', 'bindingdb' and 'dtinet'
-    # with open('dataset/' + task + '/result/train_confi_all.csv') as f1:
+    # with open('dataset/' + task + '/result/train.csv') as f1:
     #     train_data = f1.readlines()
     with open('dataset/' + task + '/result/test_confi_greater_than_50.csv') as f2:
         test_data = f2.readlines()
@@ -310,11 +310,6 @@ if __name__ == '__main__':
     auc, aupr, acc, sen, spec = val_evalute(pre, lab)
     print(auc, aupr, acc, sen, spec)
 
-    # result = np.vstack((lab, pre))
-    # np.savetxt('models/结果/ablation_structure' + task + '_0.8983124807.csv', result.T, delimiter=',', fmt='%2f')
-    # time2 = time.time()
-    # use_time = (time2 - time1) / 60
-    # print('cost ' + str(use_time) + ' minutes')
 
 
 
