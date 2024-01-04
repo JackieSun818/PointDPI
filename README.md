@@ -51,7 +51,7 @@ Line 4 can assign the GPU devices.
 
 Line 227, 228, 286, 333 can assign the dataset and the train file / test file manually.
 
-You can also used command:  python PointDPI_train.py --task drugbank --path _confi_greater_than_50 for a quickly train.
+You can also used command:  **python PointDPI_train.py --task drugbank --path _confi_greater_than_50** for a quickly train.
 
 The program can automatically save the best-performing model to the path **./models/**.
 
