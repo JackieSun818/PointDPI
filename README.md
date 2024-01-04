@@ -42,6 +42,7 @@ For Luo's dataset, we provided the split datasets for five-fold cross-validation
 For BindingDB dataset, we provided the standard splited dataset in folder **./dataset/bingdingdb/result/**.
 
 Due to storage space restrictions on github, you can download our dataset by visiting the link: https://drive.google.com/drive/folders/1sy-6yH8VBC6s1LnR8RpEG3WWUg-SW_rP?usp=drive_link
+
 Unzip the dataset folder and place it in the root directory of the project to achieve: ./dataset/
 
 # Training and testing
